@@ -1,0 +1,11 @@
+
+Qsquid:S1118;":Add a private constructor to hide the implicit public one.(™ãËÏ
+]squid:S1118	":Add a private constructor to hide the implicit public one.(½×Õ¸úÿÿÿÿ8ñ´‹Âö,
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğíñæşÿÿÿÿ
+Lsquid:S1068?"0Remove this unused "currentFrame" private field.(“Ç¢Ñøÿÿÿÿ
+Vsquid:S1610	":Convert the abstract class "Controller" into an interface.(½×Õ¸úÿÿÿÿ
+Xsquid:S1075>"ARefactor your code to get this URI from a customizable parameter.(şÔâ±
+~squid:S1450?"[Remove the "currentFrame" field and declare it as a local variable in the relevant methods.(“Ç¢Ñøÿÿÿÿ8âÖ‰Âö,
+ksquid:S21844"HCast one of the operands of this multiplication operation to a "double".(©ƒñ™øÿÿÿÿ8ÔÓôÒö,
+`squid:S21846"BCast one of the operands of this addition operation to a "double".(½ë¸É8ÔÓôÒö,
+]squid:S1118":Add a private constructor to hide the implicit public one.(ò“Ø¡øÿÿÿÿ8ÔÓôÒö,
