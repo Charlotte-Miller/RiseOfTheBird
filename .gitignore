@@ -1,1 +1,13 @@
 # Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/desktop.ini
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/sonarlint/
+.idea/uiDesigner.xml
+.idea/workspace.xml
+RiseOfThePlanetOfTheBird.iml
+desktop.ini
+out/
+src/
