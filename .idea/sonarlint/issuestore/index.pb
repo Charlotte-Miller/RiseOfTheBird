@@ -1,6 +1,4 @@
 
-=
-src/Test.java,a\8\a862b92d10f810e224187403c322cb8e01f5e244
 T
 $src/Background/MovingBackground.java,f\b\fb4ac3b8c4d1b0ea9fa7395b6462ccc627da74ae
 =
