@@ -1,7 +1,6 @@
 package Gameplay;
 
 import Background.Background;
-import Background.Cloud;
 import GameObject.Bird;
 import GameObject.Mouse;
 import edu.princeton.cs.introcs.StdDraw;
@@ -9,7 +8,6 @@ import edu.princeton.cs.introcs.StdDraw;
 import java.io.File;
 import java.util.ArrayList;
 
-import static java.awt.event.KeyEvent.VK_ENTER;
 import static java.awt.event.KeyEvent.VK_SPACE;
 
 public final class Game {
@@ -19,24 +17,6 @@ public final class Game {
     private static final ArrayList<Mouse> mouseList = new ArrayList<>();
 
     private static int point = 0;
-
-    public static void main(String[] args)
-    {
-        StdDraw.enableDoubleBuffering();
-
-        Cloud cloud = new Cloud(background.getWidth()/2 - 300, background.getHeight()/2 - 200);
-        while (true)
-        {
-            if (StdDraw.isKeyPressed(VK_ENTER))
-            {
-                background.clear();
-                cloud.move();
-                StdDraw.pause(40);
-                StdDraw.show();
-            }
-        }
-    }
-
 
     public static void play()
     {
