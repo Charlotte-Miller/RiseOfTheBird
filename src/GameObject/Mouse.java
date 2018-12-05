@@ -4,9 +4,9 @@ import edu.princeton.cs.introcs.StdDraw;
 
 public class Mouse extends GameObject {
 
+    private final int MAX_RANGE = 150;
     private int step = 40;
     private int movingDistance = 0;
-    private final int MAX_RANGE = 150;
     private int HP = 3;
     private boolean justGotHit = false; //to avoid getting hit continuously by bird
 
@@ -21,7 +21,7 @@ public class Mouse extends GameObject {
         {
             HP--;
             setModelSize(getModelSize() - 50);
-            step += (step/Math.abs(step)) * 40;
+            step += (step / Math.abs(step)) * 40;
         }
     }
 
@@ -43,7 +43,8 @@ public class Mouse extends GameObject {
         {
             moveBackAndForth();
             show();
-        } else show();
+        }
+        else show();
     }
 
     private void moveBackAndForth()

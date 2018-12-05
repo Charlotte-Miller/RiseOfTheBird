@@ -31,6 +31,11 @@ public abstract class GameObject {
         return initialCoordinate;
     }
 
+    public void setInitialCoordinate(Point initialCoordinate)
+    {
+        this.initialCoordinate = initialCoordinate;
+    }
+
     public String[] getModelPath()
     {
         return modelPath;
@@ -46,18 +51,13 @@ public abstract class GameObject {
         return modelSize;
     }
 
-    public void setCurrentCoordinate(int x, int y)
-    {
-        this.currentCoordinate = new Point(x, y);
-    }
-
     public void setModelSize(int modelSize)
     {
         this.modelSize = modelSize;
     }
 
-    public void setInitialCoordinate(Point initialCoordinate)
+    public void setCurrentCoordinate(int x, int y)
     {
-        this.initialCoordinate = initialCoordinate;
+        this.currentCoordinate = new Point(x, y);
     }
 }
