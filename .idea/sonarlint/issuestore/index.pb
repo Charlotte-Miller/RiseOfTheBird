@@ -29,3 +29,7 @@ I
 LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+T
+$.idea/codeStyles/codeStyleConfig.xml,d\d\dd7b3350c29c49497756c7f32c69a3bed18b1cba
+;
+_config.yml,c\d\cd089ae45ce870c45e434019e8f1ed4f066cd425

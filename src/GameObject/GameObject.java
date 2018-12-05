@@ -51,11 +51,6 @@ public abstract class GameObject {
         this.currentCoordinate = new Point(x, y);
     }
 
-    public void setModelPath(String[] modelPath)
-    {
-        this.modelPath = modelPath;
-    }
-
     public void setModelSize(int modelSize)
     {
         this.modelSize = modelSize;
