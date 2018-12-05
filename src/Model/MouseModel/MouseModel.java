@@ -4,7 +4,8 @@ import Model.Model;
 
 import java.io.File;
 
-public final class MouseModel extends Model {
+public final class MouseModel extends Model
+{
 
     public static final String[] MOUSELEFICENT =
             {

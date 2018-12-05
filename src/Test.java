@@ -3,8 +3,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Test {
-
+public class Test
+{
     public static void main(String[] args)
     {
         File folder = new File("F:\\IntelliJ IDEA 2018.2.1\\Workspace\\GunnyChick\\src\\Model\\ControllerModel\\Power bar");

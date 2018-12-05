@@ -2,8 +2,8 @@ package GameObject;
 
 import edu.princeton.cs.introcs.StdDraw;
 
-public class Mouse extends GameObject {
-
+public class Mouse extends GameObject
+{
     private final int MAX_RANGE = 150;
     private int step = 40;
     private int movingDistance = 0;

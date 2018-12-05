@@ -5,7 +5,8 @@ import edu.princeton.cs.introcs.StdDraw;
 
 import java.io.File;
 
-public class Cloud extends GameObject {
+public class Cloud extends GameObject
+{
 
     private int step = 40;
 

@@ -4,7 +4,8 @@ import edu.princeton.cs.introcs.StdDraw;
 
 import java.io.File;
 
-public class Background {
+public class Background
+{
 
     private final String backgroundPath;
     private final int width;

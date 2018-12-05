@@ -2,7 +2,8 @@ package Background;
 
 import edu.princeton.cs.introcs.StdDraw;
 
-public class MovingBackground {
+public class MovingBackground
+{
 
     public final String PATH = "F:\\IntelliJ IDEA 2018.2.1\\Workspace\\GunnyChick\\src\\Background\\Ragnarok_background.jpg";
     private final int SIZE;

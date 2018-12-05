@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 import static java.awt.event.KeyEvent.VK_SPACE;
 
-public final class Game {
-
+public final class Game
+{
     private static final Background background = new Background(1900, 1000);
     private static final ArrayList<Bird> birdList = new ArrayList<>();
     private static final ArrayList<Mouse> mouseList = new ArrayList<>();

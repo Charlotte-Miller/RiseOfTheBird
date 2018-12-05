@@ -3,8 +3,8 @@ package GameObject;
 import Gameplay.Game;
 import edu.princeton.cs.introcs.StdDraw;
 
-public class Bird extends GameObject {
-
+public class Bird extends GameObject
+{
     private double gravity = 1.5;
     private double time = 0;
 

@@ -6,8 +6,8 @@ import edu.princeton.cs.introcs.StdDraw;
 import java.io.File;
 import java.util.ArrayList;
 
-public abstract class Controller {
-
+public abstract class Controller
+{
     public static void reset()
     {
         Power.reset();
@@ -15,12 +15,13 @@ public abstract class Controller {
     }
 
     //Power controller
-    public static final class Power {
-        private static File folder = new File("src\\Model\\ControllerModel\\Power bar");
-        private static File[] powerBarFrames = folder.listFiles();
-
+    public static final class Power
+    {
         private static final int width = Game.getBackground().getWidth();
         private static final int height = 70;
+
+        private static File folder = new File("src\\Model\\ControllerModel\\Power bar");
+        private static File[] powerBarFrames = folder.listFiles();
 
         private static int currentFrame = 0;
         private static double currentVelocity = 0;
@@ -52,7 +53,8 @@ public abstract class Controller {
     }
 
     //Shooting Angle controller
-    public static final class Angle {
+    public static final class Angle
+    {
         private static final String ARROW_MODEL_PATH = "F:\\IntelliJ IDEA 2018.2.1\\Workspace\\GunnyChick\\src\\Model\\ControllerModel\\Angle bar\\arrow.png";
         private static final int MAX_ANGLE = 75;
         private static ArrayList<String> angleModelPath = new ArrayList<>();

@@ -2,8 +2,8 @@ package GameObject;
 
 import java.awt.*;
 
-public abstract class GameObject {
-
+public abstract class GameObject
+{
     private Point initialCoordinate;
     private Point currentCoordinate;
     private String[] modelPath;

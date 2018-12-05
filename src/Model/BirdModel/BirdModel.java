@@ -4,7 +4,8 @@ import Model.Model;
 
 import java.io.File;
 
-public final class BirdModel extends Model {
+public final class BirdModel extends Model
+{
 
     public static final String[] THORD_ORIGINAL =
             {
@@ -30,7 +31,6 @@ public final class BirdModel extends Model {
             {
                     new File("src\\Model\\BirdModel\\Thord\\Thord_4.png").getAbsolutePath()
             };
-
 
     public static final String[] CHUCK =
             {
