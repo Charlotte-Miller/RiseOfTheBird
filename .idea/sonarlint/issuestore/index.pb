@@ -21,3 +21,11 @@ N
 src/Background/Background.java,8\6\86776ab4644f2dc22d4437ccf9b23a4a78c63761
 A
 RiseOfTheBird.iml,5\5\555d6b0ce9ac49ae70b21bfb43e1c8f45c695c09
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+I
+src/Background/Cloud.java,c\2\c28fe4e92f547a1917c297cbfea0293ba874c549
+7
+LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

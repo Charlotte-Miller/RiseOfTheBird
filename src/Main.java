@@ -9,6 +9,8 @@ public class Main {
         Game.addBird(BirdModel.THORD, 250);
         Game.addBird(BirdModel.THORD, 250);
         Game.addBird(BirdModel.THORD, 250);
+        Game.addBird(BirdModel.THORD, 250);
+        Game.addBird(BirdModel.THORD, 250);
 
         Game.addMouse(MouseModel.MOUSELEFICENT , 225);
 
