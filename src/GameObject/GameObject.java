@@ -23,6 +23,7 @@ public abstract class GameObject {
     }
 
     public abstract void move();
+
     public abstract void show();
 
     public Point getInitialCoordinate()

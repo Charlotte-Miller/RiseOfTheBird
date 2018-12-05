@@ -7,12 +7,12 @@ public class Main {
     public static void main(String[] args)
     {
         Game.addBird(BirdModel.THORD, 250);
-        Game.addBird(BirdModel.CHUCK, 150);
         Game.addBird(BirdModel.THORD, 250);
-        Game.addBird(BirdModel.CHUCK, 150);
+        Game.addBird(BirdModel.THORD, 250);
+        Game.addBird(BirdModel.THORD, 250);
         Game.addBird(BirdModel.THORD, 250);
 
-        Game.addMouse(MouseModel.MOUSELEFICENT , 225);
+        Game.addMouse(MouseModel.MOUSELEFICENT, 225);
 
         Game.play();
     }
