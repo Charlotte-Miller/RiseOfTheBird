@@ -16,7 +16,7 @@ public abstract class Controller {
 
     //Power controller
     public static final class Power {
-        private static File folder = new File("F:\\IntelliJ IDEA 2018.2.1\\Workspace\\GunnyChick\\src\\Model\\ControllerModel\\Power bar");
+        private static File folder = new File("src\\Model\\ControllerModel\\Power bar");
         private static File[] powerBarFrames = folder.listFiles();
 
         private static final int width = Game.getBackground().getWidth();
