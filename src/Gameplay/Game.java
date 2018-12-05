@@ -33,7 +33,7 @@ public final class Game {
 
     private static void gameOver()
     {
-        if (point == 3)
+        if (point >= 3)
         {
             won();
         }
