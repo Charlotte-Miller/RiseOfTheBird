@@ -23,14 +23,23 @@ public final class Game {
         for (Bird bird : birdList)
         {
             playOneRound(bird);
+            if (point == 3)
+            {
+                break;
+            }
         }
+        gameOver();
+    }
 
-        if (point < 3)
-        {
-            lost();
-        } else
+    private static void gameOver()
+    {
+        if (point == 3)
         {
             won();
+        }
+        else
+        {
+            lost();
         }
     }
 
@@ -174,7 +183,8 @@ public final class Game {
                 {
                     mouseList.remove(mouse);
                     return;
-                } else if (mouse.getHitBy(bird))
+                }
+                else if (mouse.getHitBy(bird))
                 {
                     mouse.getDamaged();
                     bird.knockBack();
