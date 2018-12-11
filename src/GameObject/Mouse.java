@@ -6,7 +6,7 @@ public class Mouse extends GameObject
 {
     private final int MAX_RANGE = 150;
     private int step = 40;
-    private int movingDistance = 0;
+    private int movingDistance = 0; //how far the Mouse has moved
     private int HP = 3;
     private boolean justGotHit = false; //to avoid getting hit continuously by bird
 

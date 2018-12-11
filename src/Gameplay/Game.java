@@ -168,11 +168,6 @@ public final class Game
         mouseList.add(addedMouse);
     }
 
-    public static Background getBackground()
-    {
-        return background;
-    }
-
     private static void runAllMouses()
     {
         for (Mouse mouse : mouseList)
@@ -194,4 +189,10 @@ public final class Game
             mouse.move();
         }
     }
+
+    public static Background getBackground()
+    {
+        return background;
+    }
+
 }
