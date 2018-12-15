@@ -1,3 +1,4 @@
 
-Ysquid:S2094"BRemove this empty class, write its code or make it an "interface".(‹à…Ã
 rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·ñÃì
+Ysquid:S2094"BRemove this empty class, write its code or make it an "interface".(ı¢û°
+Ssquid:S1610"5Convert the abstract class "Model" into an interface.(ı¢û°8¢≠óÅ˙,
