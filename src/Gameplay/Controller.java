@@ -55,12 +55,15 @@ public abstract class Controller
     //Shooting Angle controller
     public static final class Angle
     {
-        private static final String ARROW_MODEL_PATH = "F:\\IntelliJ IDEA 2018.2.1\\Workspace\\GunnyChick\\src\\Model\\ControllerModel\\Angle bar\\arrow.png";
-        private static final int MAX_ANGLE = 75;
+        private static final String ARROW_MODEL_PATH = "src\\Model\\ControllerModel\\Angle bar\\arrow.png";
+        private static int ARROW_WIDTH = 0;
+        private static final int ARROW_HEIGHT = 150;
+        private static final int MAX_ANGLE = 80;
         private static ArrayList<String> angleModelPath = new ArrayList<>();
         private static int currentFrame = 0;
         private static double currentAngle = 0;
-        private static int changeLevel = 1;
+        private static int angleChangeLevel = 1;
+        private static int arrowWidthChangeLevel = 1;
 
         static
         {
@@ -83,16 +86,27 @@ public abstract class Controller
 
         public static void getShootingAngleByPlayer()
         {
-            if (currentAngle >= MAX_ANGLE || currentAngle < 0) changeLevel *= -1;
-            currentAngle += 3 * changeLevel;
+            if (currentAngle >= MAX_ANGLE || currentAngle < 0) angleChangeLevel *= -1;
+            currentAngle += 3 * angleChangeLevel;
         }
 
         public static void performCurrentShootingAngle(Bird bird)
         {
-            double arrowX = bird.getInitialCoordinate().getX() + bird.getModelSize() + 25;
-            double arrowY = bird.getInitialCoordinate().getY();
+            double distanceBetweenBirdAndArrow = ARROW_WIDTH / 2 + 150;
+            double arrowX = distanceBetweenBirdAndArrow * Math.cos(Math.toRadians(currentAngle)) + bird.getInitialCoordinate().getX();
+            double arrowY = distanceBetweenBirdAndArrow * Math.sin(Math.toRadians(currentAngle)) + bird.getInitialCoordinate().getY();
 
-            StdDraw.picture(arrowX, arrowY, ARROW_MODEL_PATH, 300, 150, currentAngle);
+            StdDraw.picture(arrowX, arrowY, ARROW_MODEL_PATH, ARROW_WIDTH, ARROW_HEIGHT, currentAngle);
+
+            changeArrowWidth();
+        }
+
+        private static void changeArrowWidth()
+        {
+            final int MAX_WIDTH = 250;
+            if (ARROW_WIDTH >= MAX_WIDTH || ARROW_WIDTH < 0) arrowWidthChangeLevel *= -1;
+
+            ARROW_WIDTH += arrowWidthChangeLevel * 10;
         }
     }
 }
