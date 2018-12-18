@@ -19,6 +19,8 @@ public abstract class Controller
     {
         private static final int width = Game.getBackground().getWidth();
         private static final int height = 70;
+        private static final int VELOCITY_MULTIPLIER = 30;
+
 
         private static File folder = new File("src\\Model\\ControllerModel\\Power bar");
         private static File[] powerBarFrames = folder.listFiles();
@@ -46,7 +48,7 @@ public abstract class Controller
                 changeLevel *= -1;   //change direction of power flow if it reaches the bar's edges
             }
             currentFrame += changeLevel;
-            currentVelocity = currentFrame * 20;
+            currentVelocity = currentFrame * VELOCITY_MULTIPLIER;
 
             StdDraw.picture(0, -Game.getBackground().getHeight() / 2 + 50, Power.powerBarFrames[currentFrame].getAbsolutePath(), width, height);
         }
