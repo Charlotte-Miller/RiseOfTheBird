@@ -5,8 +5,6 @@ $src/Background/MovingBackground.java,f\b\fb4ac3b8c4d1b0ea9fa7395b6462ccc627da7
 src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
 N
 src/GameObject/GameObject.java,0\9\097fe7ebf8ab0042a1cefe317608bead7b57dc5f
-H
-src/GameObject/Bird.java,4\2\42dcecc23194f8d92157aedb7fb557998e66f981
 R
 "src/Model/BirdModel/BirdModel.java,a\6\a69baa363e5b09461fcb0458eebc5e442e4a3b76
 I
@@ -35,3 +33,7 @@ $.idea/codeStyles/codeStyleConfig.xml,d\d\dd7b3350c29c49497756c7f32c69a3bed18b1
 _config.yml,c\d\cd089ae45ce870c45e434019e8f1ed4f066cd425
 D
 src/Model/Model.java,4\7\47a2512378eedcc281dd84900761e7b188e6b9cd
+M
+src/GameObject/Bird/Bird.java,0\3\034ae7b849a996d80fbb1f97bbb3e3c7287f7206
+N
+src/GameObject/Bird/Thord.java,a\d\ad0d3b3d053b0e4c42fcc31757512e0771f0040a

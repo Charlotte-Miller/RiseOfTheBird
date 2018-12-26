@@ -1,5 +1,6 @@
 package GameObject;
 
+import GameObject.Bird.Bird;
 import edu.princeton.cs.introcs.StdDraw;
 
 public class Mouse extends GameObject

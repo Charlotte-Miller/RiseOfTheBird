@@ -1,6 +1,6 @@
 package Gameplay;
 
-import GameObject.Bird;
+import GameObject.Bird.Bird;
 import edu.princeton.cs.introcs.StdDraw;
 
 import java.io.File;

@@ -1,7 +1,7 @@
 package Gameplay;
 
 import Background.Background;
-import GameObject.Bird;
+import GameObject.Bird.Bird;
 import GameObject.Mouse;
 import edu.princeton.cs.introcs.StdDraw;
 
