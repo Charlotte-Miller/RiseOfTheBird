@@ -75,4 +75,9 @@ public abstract class Bird extends GameObject
     {
         this.currentAngle = angle;
     }
+
+    public double getCurrentAngle()
+    {
+        return currentAngle;
+    }
 }
