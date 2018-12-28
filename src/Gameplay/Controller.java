@@ -101,10 +101,4 @@ public abstract class Controller
             StdDraw.picture(arrowX, arrowY, ARROW_MODEL_PATH, ARROW_WIDTH, ARROW_HEIGHT, currentAngle);
         }
     }
-
-    //Skill controller
-    public static final class Skill
-    {
-
-    }
 }
