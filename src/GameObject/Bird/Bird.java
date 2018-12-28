@@ -8,7 +8,6 @@ public abstract class Bird extends GameObject
 {
     private double gravity = 1.5;
     private double time = 0;
-
     private double velocity;
     private double currentAngle;
 

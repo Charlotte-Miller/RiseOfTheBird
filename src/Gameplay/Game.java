@@ -2,6 +2,7 @@ package Gameplay;
 
 import Background.Background;
 import GameObject.Bird.Bird;
+import GameObject.Bird.Thord.Thord;
 import GameObject.Mouse;
 import edu.princeton.cs.introcs.StdDraw;
 
@@ -12,6 +13,18 @@ import static java.awt.event.KeyEvent.VK_SPACE;
 
 public final class Game
 {
+    public static void main(String[] args)
+    {
+        Thord thord = new Thord();
+        thord.setCurrentAngle(60);
+        while (true)
+        {
+            thord.show();
+            thord.useSkill();
+            StdDraw.pause(60);
+        }
+    }
+
     private static final Background background = new Background(1900, 1000);
     private static final ArrayList<Bird> birdList = new ArrayList<>();
     private static final ArrayList<Mouse> mouseList = new ArrayList<>();
@@ -141,6 +154,15 @@ public final class Game
     {
         while (!currentBird.isOverreached())
         {
+            while (StdDraw.isKeyPressed(VK_SPACE))//When skill key is pressed
+            {
+                if (StdDraw.isKeyPressed(VK_SPACE))
+                {
+                    currentBird.useSkill();
+                }
+            }
+
+
             background.clear();
             currentBird.move();
 
@@ -152,9 +174,16 @@ public final class Game
 
     }
 
-    public static void addBird(String[] chickModel, int modelSize)
+    public static void addBird(BirdCharacter character)
     {
-        addBird(new Bird(-700, -300, chickModel, modelSize));
+        switch (character)
+        {
+            case THORD:
+                birdList.add(new Thord());
+//            default:
+//                System.err.println("Bird character: " + character.name() + " doesn't exist.");
+        }
+
     }
 
     private static void addBird(Bird addedBird)
