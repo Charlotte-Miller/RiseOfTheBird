@@ -1,4 +1,7 @@
 
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğíñæşÿÿÿÿ
-`squid:S21848"BCast one of the operands of this division operation to a "double".(ÇÛÏò8£­—ú,
-]squid:S1118":Add a private constructor to hide the implicit public one.(Ë–ğªşÿÿÿÿ8ÄºĞ¡÷,
+`squid:S2184E"BCast one of the operands of this division operation to a "double".(ÇÛÏò8£­—ú,
+Ysquid:UnusedPrivateMethod½",Remove this unused private "addBird" method.(ÃÍ×å8òœ˜Æÿ,
+”"squid:SwitchLastCaseIsDefaultCheck³"YComplete cases by adding the missing enum constants or add a default case to this switch.(¥ÿ±¨ÿÿÿÿÿ8òœ˜Æÿ,
+osquid:S1301³"KReplace this "switch" statement by "if" statements to increase readability.(¥ÿ±¨ÿÿÿÿÿ8òœ˜Æÿ,
+isquid:CommentedOutCodeLine¸"<This block of commented-out lines of code should be removed.(›üëE8òœ˜Æÿ,

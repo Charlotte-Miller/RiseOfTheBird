@@ -35,3 +35,7 @@ D
 src/Model/Model.java,4\7\47a2512378eedcc281dd84900761e7b188e6b9cd
 M
 src/GameObject/Bird/Bird.java,0\3\034ae7b849a996d80fbb1f97bbb3e3c7287f7206
+X
+(src/GameObject/Bird/Thord/Lightning.java,0\2\0228756e802994cab9b432841996d676cb6d9bf5
+T
+$src/GameObject/Bird/Thord/Thord.java,1\5\15430b1db1a94a2bf2a25ca3869b55bc179003ef

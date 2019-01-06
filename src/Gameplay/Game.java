@@ -16,7 +16,7 @@ public final class Game
     public static void main(String[] args)
     {
         Thord thord = new Thord();
-        thord.setCurrentAngle(60);
+        thord.setCurrentAngle(0);
         while (true)
         {
             thord.show();
@@ -154,16 +154,15 @@ public final class Game
     {
         while (!currentBird.isOverreached())
         {
-            while (StdDraw.isKeyPressed(VK_SPACE))//When skill key is pressed
+            background.clear();
+
+            if (StdDraw.isKeyPressed(VK_SPACE))//When skill activate key is pressed
             {
-                if (StdDraw.isKeyPressed(VK_SPACE))
+                while (StdDraw.isKeyPressed(VK_SPACE))
                 {
                     currentBird.useSkill();
                 }
             }
-
-
-            background.clear();
             currentBird.move();
 
             runAllMouses();

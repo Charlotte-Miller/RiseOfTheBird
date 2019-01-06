@@ -10,13 +10,15 @@ public class Thord extends Bird
     public Thord()
     {
         super(-700, -300, BirdModel.THORD_ORIGINAL, 200);
-        LIGHTNING = new Lightning(this.getCurrentCoordinate(), 100, 250);
+        LIGHTNING = new Lightning(100, 250);
     }
 
     @Override
     public void useSkill()
     {
         LIGHTNING.setInitialAngle(this.getCurrentAngle());
+        LIGHTNING.setCurrentPosition(this.getCurrentCoordinate());
+
         //Throw a lightning in the direction that the bird is currently facing
         if (!LIGHTNING.striked)
         {

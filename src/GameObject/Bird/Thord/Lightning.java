@@ -9,7 +9,7 @@ public class Lightning
 {
     private final File LIGHTNING_MODEL_FOLDER;
     private final File[] LIGHTNING_FRAME;
-    private final Point INITIAL_POSTION;
+    private Point currentPosition;
     private double initialAngle;
     private final double SPEED;
     private final double SIZE;
@@ -18,16 +18,15 @@ public class Lightning
     private double currentX;
     private double currentY;
 
-    public Lightning(Point INITIAL_POSTION, double SPEED, double SIZE)
+    public Lightning(double SPEED, double SIZE)
     {
         this.LIGHTNING_MODEL_FOLDER = new File("src\\Model\\BirdModel\\Thord\\Lightning");
         this.LIGHTNING_FRAME = LIGHTNING_MODEL_FOLDER.listFiles();
         this.initialAngle = 0;
-        this.INITIAL_POSTION = INITIAL_POSTION;
         this.SPEED = SPEED;
         this.SIZE = SIZE;
-        this.currentX = INITIAL_POSTION.getX() + 200;
-        this.currentY = INITIAL_POSTION.getY();
+        this.currentX = 0;
+        this.currentY = 0;
     }
 
     public void dart()
@@ -43,5 +42,12 @@ public class Lightning
     public void setInitialAngle(double initialAngle)
     {
         this.initialAngle = initialAngle;
+    }
+
+    public void setCurrentPosition(Point currentPosition)
+    {
+        this.currentPosition = currentPosition;
+        this.currentX = currentPosition.getX() + 50;
+        this.currentY = currentPosition.getY();
     }
 }
