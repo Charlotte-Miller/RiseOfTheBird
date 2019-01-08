@@ -9,14 +9,12 @@ public class Lightning
 {
     private final File LIGHTNING_MODEL_FOLDER;
     private final File[] LIGHTNING_FRAME;
-    private Point currentPosition;
     private double initialAngle;
     private final double SPEED;
     private final double SIZE;
     public boolean striked;
 
-    private double currentX;
-    private double currentY;
+    private Point currentPosition;
 
     public Lightning(double SPEED, double SIZE)
     {
@@ -25,18 +23,15 @@ public class Lightning
         this.initialAngle = 0;
         this.SPEED = SPEED;
         this.SIZE = SIZE;
-        this.currentX = 0;
-        this.currentY = 0;
+        this.currentPosition = new Point(0, 0);
     }
 
     public void dart()
     {
-        currentX += SPEED * Math.cos(Math.toRadians(initialAngle));
-        currentY += SPEED * Math.sin(Math.toRadians(initialAngle));
+        currentPosition.x += SPEED * Math.cos(Math.toRadians(initialAngle));
+        currentPosition.y += SPEED * Math.sin(Math.toRadians(initialAngle));
 
-        StdDraw.picture(currentX, currentY, LIGHTNING_FRAME[0].getAbsolutePath(), SIZE, SIZE, initialAngle + 100);
-
-        currentX += SPEED;
+        StdDraw.picture(currentPosition.x, currentPosition.y, LIGHTNING_FRAME[0].getAbsolutePath(), SIZE, SIZE, initialAngle + 100);
     }
 
     public void setInitialAngle(double initialAngle)
@@ -44,10 +39,9 @@ public class Lightning
         this.initialAngle = initialAngle;
     }
 
-    public void setCurrentPosition(Point currentPosition)
+    public void setCurrentPosition(Point position)
     {
-        this.currentPosition = currentPosition;
-        this.currentX = currentPosition.getX() + 50;
-        this.currentY = currentPosition.getY();
+        this.currentPosition = new Point(position);
+        this.currentPosition.x += 100;
     }
 }

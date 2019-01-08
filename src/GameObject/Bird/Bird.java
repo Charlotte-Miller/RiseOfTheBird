@@ -10,6 +10,7 @@ public abstract class Bird extends GameObject
     private double time = 0;
     private double velocity;
     private double currentAngle;
+    public boolean skillKeyIsPressed = false;
 
     public Bird(int x, int y, String[] model, int modelSize, double velocity, double currentAngle)
     {

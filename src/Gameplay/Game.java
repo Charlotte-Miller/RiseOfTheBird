@@ -21,7 +21,6 @@ public final class Game
         {
             thord.show();
             thord.useSkill();
-            StdDraw.pause(60);
         }
     }
 
