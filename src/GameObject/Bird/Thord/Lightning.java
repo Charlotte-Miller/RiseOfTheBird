@@ -56,10 +56,4 @@ public class Lightning
         this.currentPosition = new Point(position);
         this.currentPosition.x += 100;
     }
-
-    public boolean isOverreached()
-    {
-        return (this.currentPosition.getX() - this.SIZE) >= GameConsole.getBackground().getWidth()
-                || (this.currentPosition.getY() - this.SIZE) <= -GameConsole.getBackground().getHeight();
-    }
 }

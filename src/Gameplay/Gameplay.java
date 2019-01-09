@@ -4,7 +4,7 @@ import Assests.MouseModel.MouseModel;
 
 public class Gameplay
 {
-    public static BirdCharacter[] characters = {BirdCharacter.THORD};
+    public static BirdCharacter[] characters = {BirdCharacter.THORD, BirdCharacter.THORD, BirdCharacter.BULK, BirdCharacter.BULK};
 
     public static void main(String[] args)
     {

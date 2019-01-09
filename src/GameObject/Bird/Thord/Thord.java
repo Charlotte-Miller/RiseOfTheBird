@@ -31,10 +31,4 @@ public class Thord extends Bird
             LIGHTNING.dart();
         }
     }
-
-    @Override
-    public boolean isOverreached()
-    {
-        return super.isOverreached() || LIGHTNING.isOverreached();
-    }
 }
