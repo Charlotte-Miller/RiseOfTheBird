@@ -1,4 +1,4 @@
-package Model;
+package Assests;
 
 public abstract class Model
 {

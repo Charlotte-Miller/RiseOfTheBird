@@ -1,7 +1,7 @@
 package GameObject.Bird.Thord;
 
+import Assests.BirdModel.BirdModel;
 import GameObject.Bird.Bird;
-import Model.BirdModel.BirdModel;
 
 public class Thord extends Bird
 {

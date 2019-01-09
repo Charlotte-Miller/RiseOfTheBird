@@ -1,6 +1,6 @@
-package Model.MouseModel;
+package Assests.MouseModel;
 
-import Model.Model;
+import Assests.Model;
 
 import java.io.File;
 

@@ -1,6 +1,6 @@
-package Model.BirdModel;
+package Assests.BirdModel;
 
-import Model.Model;
+import Assests.Model;
 
 import java.io.File;
 

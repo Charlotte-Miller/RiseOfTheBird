@@ -2,22 +2,18 @@ package Gameplay;
 
 import Background.Background;
 import GameObject.Bird.Bird;
-import GameObject.Bird.Thord.Thord;
 import edu.princeton.cs.introcs.StdDraw;
 
+import java.awt.*;
 import java.io.File;
+
+import static java.awt.event.KeyEvent.VK_ENTER;
 
 public final class Game
 {
     public static void main(String[] args)
     {
-        Thord thord = new Thord();
-        thord.setCurrentAngle(0);
-        while (true)
-        {
-            thord.show();
-            thord.useSkill();
-        }
+        replay();
     }
 
     static final Background background = new Background(1900, 1000);
@@ -64,18 +60,40 @@ public final class Game
         {
             lost();
         }
+        replay();
+    }
+
+    private static void replay()
+    {
+        File[] path = new File("src\\Model\\Menu\\Replay").listFiles();
+
+        StdDraw.pause(1000);
+        StdDraw.clear(Color.BLACK);
+        StdDraw.picture(0, 0, path[0].getAbsolutePath(), background.getHeight(), background.getHeight());
+        StdDraw.show();
+
+        while (true)
+        {
+            if (StdDraw.isKeyPressed(VK_ENTER))
+            {
+                StdDraw.clear(Color.WHITE);
+                StdDraw.picture(0, 0, path[1].getAbsolutePath(), background.getHeight(), background.getHeight());
+                StdDraw.show();
+                StdDraw.pause(500);
+            }
+        }
     }
 
     private static void lost()
     {
-        String path = new File("src\\Gameplay\\lost.jpg").getAbsolutePath();
+        String path = new File("src\\Model\\Menu\\lost.jpg").getAbsolutePath();
         StdDraw.picture(0, 0, path, background.getWidth(), background.getHeight());
         StdDraw.show();
     }
 
     private static void won()
     {
-        String path = new File("src\\Gameplay\\won.jpg").getAbsolutePath();
+        String path = new File("src\\Model\\Menu\\won.jpg").getAbsolutePath();
         StdDraw.picture(0, 0, path, background.getWidth() / 2, background.getHeight());
         StdDraw.show();
     }

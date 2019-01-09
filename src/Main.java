@@ -1,8 +1,8 @@
+import Assests.MouseModel.MouseModel;
 import Gameplay.BirdCharacter;
 import Gameplay.BirdConsole;
 import Gameplay.Game;
 import Gameplay.MouseConsole;
-import Model.MouseModel.MouseModel;
 
 public class Main
 {
@@ -10,9 +10,8 @@ public class Main
     {
 //        BirdConsole.addBird(BirdCharacter.THORD);
         BirdConsole.addBird(BirdCharacter.BULK);
-        BirdConsole.addBird(BirdCharacter.BULK);
 //        BirdConsole.addBird(BirdCharacter.THORD);
-        BirdConsole.addBird(BirdCharacter.BULK);
+//        BirdConsole.addBird(BirdCharacter.BULK);
 
         MouseConsole.addMouse(MouseModel.MOUSELEFICENT, 225);
 

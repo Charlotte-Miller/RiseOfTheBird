@@ -1,6 +1,6 @@
 package GameObject.Bird;
 
-import Model.BirdModel.BirdModel;
+import Assests.BirdModel.BirdModel;
 
 public class Bulk extends Bird
 {
