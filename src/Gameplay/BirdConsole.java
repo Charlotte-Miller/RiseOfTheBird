@@ -12,7 +12,7 @@ import static java.awt.event.KeyEvent.VK_SPACE;
 public final class BirdConsole
 {
 
-    static final ArrayList<Bird> birdList = new ArrayList<>();
+    static ArrayList<Bird> birdList = new ArrayList<>();
 
     static void setShootingAngle(Bird currentBird)
     {
@@ -25,7 +25,7 @@ public final class BirdConsole
                     Controller.Angle.getShootingAngleByPlayer();
                     Controller.Angle.setShootingAngle(currentBird);
 
-                    Game.background.clear();
+                    GameConsole.background.clear();
                     currentBird.show();
                     Controller.Angle.performCurrentShootingAngle(currentBird);
 
@@ -47,7 +47,7 @@ public final class BirdConsole
             {
                 while (StdDraw.isKeyPressed(VK_SPACE))
                 {
-                    Game.background.clear();
+                    GameConsole.background.clear();
                     Controller.Power.getInitialVelocityByPlayer();
                     currentBird.show();
 
@@ -68,7 +68,7 @@ public final class BirdConsole
     {
         while (!currentBird.isOverreached())
         {
-            Game.background.clear();
+            GameConsole.background.clear();
 
             Controller.Skill.useSkillOf(currentBird);
             currentBird.move();

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class MouseConsole
 {
-    public static final ArrayList<Mouse> mouseList = new ArrayList<>();
+    public static ArrayList<Mouse> mouseList = new ArrayList<>();
 
     static void resetHittingStatusOfAllMouses()
     {
@@ -38,7 +38,7 @@ public class MouseConsole
                 {
                     mouse.getDamaged();
                     bird.knockBack();
-                    Game.increaseOnePoint();
+                    GameConsole.increaseOnePoint();
                 }
             }
             mouse.move();

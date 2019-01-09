@@ -20,7 +20,7 @@ public abstract class Controller
     //Power controller
     static final class Power
     {
-        private static final int width = Game.getBackground().getWidth();
+        private static final int width = GameConsole.getBackground().getWidth();
         private static final int height = 70;
         private static final int VELOCITY_MULTIPLIER = 30;
 
@@ -53,7 +53,7 @@ public abstract class Controller
             currentFrame += changeLevel;
             currentVelocity = currentFrame * VELOCITY_MULTIPLIER;
 
-            StdDraw.picture(0, -Game.getBackground().getHeight() / 2 + 50, Power.powerBarFrames[currentFrame].getAbsolutePath(), width, height);
+            StdDraw.picture(0, -GameConsole.getBackground().getHeight() / 2 + 50, Power.powerBarFrames[currentFrame].getAbsolutePath(), width, height);
         }
     }
 

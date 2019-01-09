@@ -1,7 +1,7 @@
 package GameObject.Bird.Thord;
 
 import GameObject.Mouse;
-import Gameplay.Game;
+import Gameplay.GameConsole;
 import Gameplay.MouseConsole;
 import edu.princeton.cs.introcs.StdDraw;
 
@@ -35,7 +35,7 @@ public class Lightning
         {
             if (currentPosition.distance(mouse.getCurrentCoordinate()) <= (this.SIZE / 3 + mouse.getModelSize() / 3))
             {
-                Game.increaseOnePoint();
+                GameConsole.increaseOnePoint();
                 mouse.getDamaged();
                 striked = true;
             }
@@ -59,7 +59,7 @@ public class Lightning
 
     public boolean isOverreached()
     {
-        return (this.currentPosition.getX() - this.SIZE) >= Game.getBackground().getWidth()
-                || (this.currentPosition.getY() - this.SIZE) <= -Game.getBackground().getHeight();
+        return (this.currentPosition.getX() - this.SIZE) >= GameConsole.getBackground().getWidth()
+                || (this.currentPosition.getY() - this.SIZE) <= -GameConsole.getBackground().getHeight();
     }
 }

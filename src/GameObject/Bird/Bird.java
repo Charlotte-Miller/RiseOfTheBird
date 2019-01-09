@@ -1,7 +1,7 @@
 package GameObject.Bird;
 
 import GameObject.GameObject;
-import Gameplay.Game;
+import Gameplay.GameConsole;
 import edu.princeton.cs.introcs.StdDraw;
 
 public abstract class Bird extends GameObject
@@ -63,8 +63,8 @@ public abstract class Bird extends GameObject
 
     public boolean isOverreached()
     {
-        return (this.getCurrentCoordinate().getX() - this.getModelSize()) >= Game.getBackground().getWidth()
-                || (this.getCurrentCoordinate().getY() - this.getModelSize()) <= -Game.getBackground().getHeight();
+        return (this.getCurrentCoordinate().getX() - this.getModelSize()) >= GameConsole.getBackground().getWidth()
+                || (this.getCurrentCoordinate().getY() - this.getModelSize()) <= -GameConsole.getBackground().getHeight();
     }
 
     public void setVelocity(double velocity)
