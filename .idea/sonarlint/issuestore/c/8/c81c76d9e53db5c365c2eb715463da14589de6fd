@@ -1,7 +1,9 @@
 
+Ysquid:UnusedPrivateMethod¹",Remove this unused private "addBird" method.(ÃÍ×å8òœ˜Æÿ,
+`squid:S2184D"BCast one of the operands of this division operation to a "double".(ÇÛÏò8£­—ú,
+osquid:S1301¯"KReplace this "switch" statement by "if" statements to increase readability.(¥ÿ±¨ÿÿÿÿÿ8òœ˜Æÿ,
 wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğíñæşÿÿÿÿ
-`squid:S2184E"BCast one of the operands of this division operation to a "double".(ÇÛÏò8£­—ú,
-Ysquid:UnusedPrivateMethod½",Remove this unused private "addBird" method.(ÃÍ×å8òœ˜Æÿ,
-”"squid:SwitchLastCaseIsDefaultCheck³"YComplete cases by adding the missing enum constants or add a default case to this switch.(¥ÿ±¨ÿÿÿÿÿ8òœ˜Æÿ,
-osquid:S1301³"KReplace this "switch" statement by "if" statements to increase readability.(¥ÿ±¨ÿÿÿÿÿ8òœ˜Æÿ,
-isquid:CommentedOutCodeLine¸"<This block of commented-out lines of code should be removed.(›üëE8òœ˜Æÿ,
+@squid:S2386"Make this member "protected".(Û´ÀÓşÿÿÿÿ8•¯Óˆƒ-
+—squid:S1319"tThe type of the "mouseList" object should be an interface such as "List" rather than the implementation "ArrayList".(Û´ÀÓşÿÿÿÿ8•¯Óˆƒ-
+”"squid:SwitchLastCaseIsDefaultCheck¯"YComplete cases by adding the missing enum constants or add a default case to this switch.(¥ÿ±¨ÿÿÿÿÿ8òœ˜Æÿ,
+isquid:CommentedOutCodeLine´"<This block of commented-out lines of code should be removed.(›üëE8òœ˜Æÿ,

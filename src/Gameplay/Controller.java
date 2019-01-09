@@ -6,16 +6,19 @@ import edu.princeton.cs.introcs.StdDraw;
 import java.io.File;
 import java.util.ArrayList;
 
+import static java.awt.event.KeyEvent.VK_SPACE;
+
 public abstract class Controller
 {
-    public static void reset()
+    static void reset()
     {
         Power.reset();
         Angle.reset();
+        Skill.reset();
     }
 
     //Power controller
-    public static final class Power
+    static final class Power
     {
         private static final int width = Game.getBackground().getWidth();
         private static final int height = 70;
@@ -36,12 +39,12 @@ public abstract class Controller
             changeLevel = -1;
         }
 
-        public static void setInitialVelocity(Bird bird)
+        static void setInitialVelocity(Bird bird)
         {
             bird.setVelocity(currentVelocity);
         }
 
-        public static void getInitialVelocityByPlayer()
+        static void getInitialVelocityByPlayer()
         {
             if (currentFrame % (powerBarFrames.length - 1) == 0)
             {
@@ -55,7 +58,7 @@ public abstract class Controller
     }
 
     //Shooting Angle controller
-    public static final class Angle
+    static final class Angle
     {
         private static final String ARROW_MODEL_PATH = "src\\Model\\ControllerModel\\Angle bar\\arrow.png";
         private static final int ARROW_WIDTH = 150;
@@ -81,24 +84,45 @@ public abstract class Controller
             currentFrame = 0;
         }
 
-        public static void setShootingAngle(Bird bird)
+        static void setShootingAngle(Bird bird)
         {
             bird.setCurrentAngle(currentAngle);
         }
 
-        public static void getShootingAngleByPlayer()
+        static void getShootingAngleByPlayer()
         {
             if (currentAngle >= MAX_ANGLE || currentAngle < 0) angleChangeLevel *= -1;
             currentAngle += 3 * angleChangeLevel;
         }
 
-        public static void performCurrentShootingAngle(Bird bird)
+        static void performCurrentShootingAngle(Bird bird)
         {
             double distanceBetweenBirdAndArrow = ARROW_WIDTH / 2 + 150;
             double arrowX = distanceBetweenBirdAndArrow * Math.cos(Math.toRadians(currentAngle)) + bird.getInitialCoordinate().getX();
             double arrowY = distanceBetweenBirdAndArrow * Math.sin(Math.toRadians(currentAngle)) + bird.getInitialCoordinate().getY();
 
             StdDraw.picture(arrowX, arrowY, ARROW_MODEL_PATH, ARROW_WIDTH, ARROW_HEIGHT, currentAngle);
+        }
+    }
+
+    //Bird's skill controller
+    static final class Skill
+    {
+        static boolean skillIsActivated = false;
+
+        static void useSkillOf(Bird currentBird)
+        {
+            if (StdDraw.isKeyPressed(VK_SPACE) || skillIsActivated)//When skill activate key is pressed
+            {
+                skillIsActivated = true;
+                currentBird.changeForm();
+                currentBird.useSkill();
+            }
+        }
+
+        private static void reset()
+        {
+            skillIsActivated = false;
         }
     }
 }

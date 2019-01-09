@@ -1,5 +1,8 @@
 package GameObject.Bird.Thord;
 
+import GameObject.Mouse;
+import Gameplay.Game;
+import Gameplay.MouseConsole;
 import edu.princeton.cs.introcs.StdDraw;
 
 import java.awt.*;
@@ -13,7 +16,6 @@ public class Lightning
     private final double SPEED;
     private final double SIZE;
     public boolean striked;
-
     private Point currentPosition;
 
     public Lightning(double SPEED, double SIZE)
@@ -23,11 +25,21 @@ public class Lightning
         this.initialAngle = 0;
         this.SPEED = SPEED;
         this.SIZE = SIZE;
+        this.striked = false;
         this.currentPosition = new Point(0, 0);
     }
 
     public void dart()
     {
+        for (Mouse mouse : MouseConsole.mouseList)
+        {
+            if (currentPosition.distance(mouse.getCurrentCoordinate()) <= (this.SIZE / 3 + mouse.getModelSize() / 3))
+            {
+                Game.increaseOnePoint();
+                mouse.getDamaged();
+                striked = true;
+            }
+        }
         currentPosition.x += SPEED * Math.cos(Math.toRadians(initialAngle));
         currentPosition.y += SPEED * Math.sin(Math.toRadians(initialAngle));
 
@@ -43,5 +55,11 @@ public class Lightning
     {
         this.currentPosition = new Point(position);
         this.currentPosition.x += 100;
+    }
+
+    public boolean isOverreached()
+    {
+        return (this.currentPosition.getX() - this.SIZE) >= Game.getBackground().getWidth()
+                || (this.currentPosition.getY() - this.SIZE) <= -Game.getBackground().getHeight();
     }
 }

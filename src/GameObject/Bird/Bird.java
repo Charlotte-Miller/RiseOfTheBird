@@ -11,17 +11,20 @@ public abstract class Bird extends GameObject
     private double velocity;
     private double currentAngle;
     public boolean skillKeyIsPressed = false;
+    private int formIndex;
 
     public Bird(int x, int y, String[] model, int modelSize, double velocity, double currentAngle)
     {
         super(x, y, model, modelSize);
         this.velocity = velocity;
         this.currentAngle = currentAngle;
+        this.formIndex = 0;
     }
 
     public Bird(int x, int y, String[] model, int modelSize)
     {
         super(x, y, model, modelSize);
+        this.formIndex = 0;
     }
 
     public abstract void useSkill();
@@ -37,7 +40,7 @@ public abstract class Bird extends GameObject
 
         setCurrentCoordinate((int) x, (int) y);
 
-        StdDraw.picture(x, y, this.getModelPath()[0], this.getModelSize(), this.getModelSize(), currentAngle);
+        StdDraw.picture(x, y, this.getModelPath()[formIndex], this.getModelSize(), this.getModelSize(), currentAngle);
 
         currentAngle = Math.toDegrees(Math.atan(vy / vx));
         time += 0.5;
@@ -52,12 +55,10 @@ public abstract class Bird extends GameObject
         gravity += 0.2;
     }
 
-    //TODO creates the ground object then gets it's highest coordinate to finish this function
-
     @Override
     public void show()
     {
-        StdDraw.picture(getInitialCoordinate().getX(), getInitialCoordinate().getY(), getModelPath()[0], this.getModelSize(), this.getModelSize(), currentAngle);
+        StdDraw.picture(getCurrentCoordinate().getX(), getCurrentCoordinate().getY(), getModelPath()[formIndex], this.getModelSize(), this.getModelSize(), currentAngle);
     }
 
     public boolean isOverreached()
@@ -79,5 +80,25 @@ public abstract class Bird extends GameObject
     public double getCurrentAngle()
     {
         return currentAngle;
+    }
+
+    public double getGravity()
+    {
+        return gravity;
+    }
+
+    public void setGravity(double gravity)
+    {
+        this.gravity = gravity;
+    }
+
+    public void changeForm()
+    {
+        this.formIndex = 1;
+    }
+
+    public double getVelocity()
+    {
+        return velocity;
     }
 }

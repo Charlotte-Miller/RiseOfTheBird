@@ -3,13 +3,9 @@ package Gameplay;
 import Background.Background;
 import GameObject.Bird.Bird;
 import GameObject.Bird.Thord.Thord;
-import GameObject.Mouse;
 import edu.princeton.cs.introcs.StdDraw;
 
 import java.io.File;
-import java.util.ArrayList;
-
-import static java.awt.event.KeyEvent.VK_SPACE;
 
 public final class Game
 {
@@ -24,15 +20,13 @@ public final class Game
         }
     }
 
-    private static final Background background = new Background(1900, 1000);
-    private static final ArrayList<Bird> birdList = new ArrayList<>();
-    private static final ArrayList<Mouse> mouseList = new ArrayList<>();
+    static final Background background = new Background(1900, 1000);
 
-    private static int point = 0;
+    static int point = 0;
 
     public static void play()
     {
-        for (Bird bird : birdList)
+        for (Bird bird : BirdConsole.birdList)
         {
             playOneRound(bird);
             if (point == 3)
@@ -41,6 +35,23 @@ public final class Game
             }
         }
         gameOver();
+    }
+
+    public static void playOneRound(Bird currentBird)
+    {
+        StdDraw.enableDoubleBuffering();
+
+        background.clear();
+
+        currentBird.show();
+        MouseConsole.runAllMouses();
+        StdDraw.show();
+
+        BirdConsole.setShootingAngle(currentBird);
+        BirdConsole.setInitialVelocity(currentBird);
+        BirdConsole.shoot(currentBird);
+
+        reset();
     }
 
     private static void gameOver()
@@ -69,152 +80,10 @@ public final class Game
         StdDraw.show();
     }
 
-    public static void playOneRound(Bird currentBird)
-    {
-        StdDraw.enableDoubleBuffering();
-
-        background.clear();
-
-        currentBird.show();
-        runAllMouses();
-        StdDraw.show();
-
-        setShootingAngle(currentBird);
-        setInitialVelocity(currentBird);
-        shoot(currentBird);
-
-        reset();
-    }
-
     private static void reset()
     {
         Controller.reset();
-        resetHittingStatusOfAllMouses();
-    }
-
-    private static void resetHittingStatusOfAllMouses()
-    {
-        for (Mouse mouse : mouseList)
-        {
-            mouse.setJustGotHit(false);
-        }
-    }
-
-    private static void setShootingAngle(Bird currentBird)
-    {
-        while (true)
-        {
-            if (StdDraw.isKeyPressed(VK_SPACE))
-            {
-                while (StdDraw.isKeyPressed(VK_SPACE))
-                {
-                    Controller.Angle.getShootingAngleByPlayer();
-                    Controller.Angle.setShootingAngle(currentBird);
-
-                    background.clear();
-                    currentBird.show();
-                    Controller.Angle.performCurrentShootingAngle(currentBird);
-
-                    runAllMouses();
-
-                    StdDraw.pause(60);
-                    StdDraw.show();
-                }
-                break;
-            }
-        }
-    }
-
-    private static void setInitialVelocity(Bird currentBird)
-    {
-        while (true)
-        {
-            if (StdDraw.isKeyPressed(VK_SPACE))
-            {
-                while (StdDraw.isKeyPressed(VK_SPACE))
-                {
-                    background.clear();
-                    Controller.Power.getInitialVelocityByPlayer();
-                    currentBird.show();
-
-                    runAllMouses();
-
-                    StdDraw.pause(40);
-                    StdDraw.show();
-                }
-                Controller.Power.setInitialVelocity(currentBird);
-                break;
-            }
-        }
-
-    }
-
-    private static void shoot(Bird currentBird)
-    {
-        while (!currentBird.isOverreached())
-        {
-            background.clear();
-
-            if (StdDraw.isKeyPressed(VK_SPACE))//When skill activate key is pressed
-            {
-                while (StdDraw.isKeyPressed(VK_SPACE))
-                {
-                    currentBird.useSkill();
-                }
-            }
-            currentBird.move();
-
-            runAllMouses();
-
-            StdDraw.pause(20);
-            StdDraw.show();
-        }
-
-    }
-
-    public static void addBird(BirdCharacter character)
-    {
-        switch (character)
-        {
-            case THORD:
-                birdList.add(new Thord());
-//            default:
-//                System.err.println("Bird character: " + character.name() + " doesn't exist.");
-        }
-
-    }
-
-    private static void addBird(Bird addedBird)
-    {
-        birdList.add(addedBird);
-    }
-
-    public static void addMouse(String[] mouseModel, int modelSize)
-    {
-        Mouse addedMouse = new Mouse(700, -300, mouseModel, modelSize);
-        mouseList.add(addedMouse);
-    }
-
-    private static void runAllMouses()
-    {
-        for (Mouse mouse : mouseList)
-        {
-            for (Bird bird : birdList)
-            {
-                if (mouse.getHP() == 0)
-                {
-                    mouseList.remove(mouse);
-                    return;
-                }
-                else if (mouse.getHitBy(bird))
-                {
-                    mouse.getDamaged();
-                    bird.knockBack();
-                    point++;
-                }
-            }
-            mouse.move();
-        }
+        MouseConsole.resetHittingStatusOfAllMouses();
     }
 
     public static Background getBackground()
@@ -222,4 +91,8 @@ public final class Game
         return background;
     }
 
+    public static void increaseOnePoint()
+    {
+        point++;
+    }
 }
