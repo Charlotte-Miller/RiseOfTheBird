@@ -75,7 +75,7 @@ public final class BirdConsole
 
             MouseConsole.runAllMouses();
 
-            StdDraw.pause(35);
+            StdDraw.pause(45);
             StdDraw.show();
         }
     }

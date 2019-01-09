@@ -10,7 +10,7 @@ public class Thord extends Bird
     public Thord()
     {
         super(-700, -300, BirdModel.THORD, 200);
-        this.LIGHTNING = new Lightning(170, 250);
+        this.LIGHTNING = new Lightning(170, 210);
     }
 
     @Override
