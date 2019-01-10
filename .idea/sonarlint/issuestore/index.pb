@@ -1,8 +1,6 @@
 
 T
 $src/Background/MovingBackground.java,f\b\fb4ac3b8c4d1b0ea9fa7395b6462ccc627da74ae
-=
-src/Main.java,9\2\924f089edb4af5ee45c8a9d1129cd28e2b368138
 N
 src/GameObject/GameObject.java,0\9\097fe7ebf8ab0042a1cefe317608bead7b57dc5f
 R
@@ -39,3 +37,15 @@ X
 (src/GameObject/Bird/Thord/Lightning.java,0\2\0228756e802994cab9b432841996d676cb6d9bf5
 T
 $src/GameObject/Bird/Thord/Thord.java,1\5\15430b1db1a94a2bf2a25ca3869b55bc179003ef
+O
+src/Gameplay/BirdCharacter.java,c\4\c435afb1f26e0d8a707ec5c390de8cb54da60d65
+M
+src/GameObject/Bird/Bulk.java,3\3\332ea0c818487213711d90e8961f94d1802ed434
+N
+src/Gameplay/MouseConsole.java,f\6\f60f27e2f5bc0936a6b193218d8ef9b5b4f5213b
+J
+src/Gameplay/Gameplay.java,c\3\c356e6d7e988e6c4ccc7c784ce09820bae2db76b
+M
+src/Gameplay/GameConsole.java,0\f\0f520e4bb73b8c0ed6b3c25438d2a3449bd4ac56
+M
+src/Gameplay/BirdConsole.java,a\5\a55f829c352e8a87b6658146e1bf04c80e6b551a
