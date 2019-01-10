@@ -1,7 +1,10 @@
 package GameObject;
 
 import GameObject.Bird.Bird;
+import Gameplay.GameConsole;
 import edu.princeton.cs.introcs.StdDraw;
+
+import java.io.File;
 
 public class Mouse extends GameObject
 {
@@ -40,12 +43,25 @@ public class Mouse extends GameObject
     @Override
     public void move()
     {
+        showHPBar();
         if (HP > 0)
         {
             moveBackAndForth();
             show();
         }
         else show();
+    }
+
+    private void showHPBar()
+    {
+        String path = new File("src\\Model\\Score bar\\human-heart.png").getAbsolutePath();
+        int distance = 100;
+
+        for (int i = 0; i < HP; i++)
+        {
+            StdDraw.picture(GameConsole.getBackground().getWidth() / 2 - distance, GameConsole.getBackground().getHeight() / 2 - 100, path, 100, 100);
+            distance += 110;
+        }
     }
 
     private void moveBackAndForth()

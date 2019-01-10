@@ -14,7 +14,6 @@ public final class GameConsole
 {
     public static void main(String[] args)
     {
-//        replay();
     }
 
     static final Background background = new Background(1900, 1000);

@@ -9,8 +9,6 @@ I
 src/GameObject/Mouse.java,6\e\6e624711b677ab68d86e31c9d942402dde766b55
 L
 src/Gameplay/Controller.java,0\d\0ddddf312909260477bbf838b67adb11f12241e8
-F
-src/Gameplay/Game.java,c\8\c81c76d9e53db5c365c2eb715463da14589de6fd
 T
 $src/Model/MouseModel/MouseModel.java,f\7\f7460fd46d3305c399b2649f72c46ef50f7c8d89
 N
