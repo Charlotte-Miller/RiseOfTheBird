@@ -77,7 +77,6 @@ public final class GameConsole
 
         MouseConsole.mouseList = new ArrayList<>();
         MouseConsole.addMouse(Assests.MouseModel.MouseModel.MOUSELEFICENT, 225);
-
     }
 
     private static boolean wantToReplay()
